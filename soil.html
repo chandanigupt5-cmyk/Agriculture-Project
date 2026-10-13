@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgriVision - Soil Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Agri<span>Vision</span> 🌱
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="irrigation.html">Irrigation</a></li>
+                <li><a href="soil.html">Soil</a></li>
+                <li><a href="weather.html" class="active">Weather</a></li>
+                <li><a href="pests.html">Pests</a></li>
+                <li><a href="tips.html" class="active">Tips</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div style="display:flex; gap:10px; align-items:center;">
+
+                <button class="theme-btn" id="themeBtn" title="Toggle dark mode">
+                    🌙
+                </button>
+
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE HERO ================= -->
+
+    <section class="page-hero">
+
+        <div class="container page-hero-content">
+
+            <span class="badge">
+                🌱 Smart Agriculture
+            </span>
+
+            <h1>
+                Soil Management
+            </h1>
+
+            <p>
+                Healthy soil is the foundation of productive agriculture.
+                Learn about soil types, nutrients, testing, and sustainable
+                soil management practices.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRODUCTION ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="about-grid">
+
+                <div class="about-image">
+
+                    <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=1000&q=80"
+                        alt="Agricultural soil">
+
+                </div>
+
+                <div class="about-content">
+
+                    <span class="section-label">
+                        SOIL HEALTH
+                    </span>
+
+                    <h2>
+                        Why Soil is Important
+                    </h2>
+
+                    <p>
+                        Soil provides plants with water, nutrients, air, and
+                        physical support. Healthy soil helps crops grow properly
+                        and can improve farm productivity.
+                    </p>
+
+                    <p>
+                        Good soil management focuses on maintaining organic matter,
+                        protecting soil structure, managing nutrients, and reducing
+                        erosion.
+                    </p>
+
+                    <ul class="check-list">
+
+                        <li>Supports healthy plant growth</li>
+
+                        <li>Stores and supplies water</li>
+
+                        <li>Provides essential nutrients</li>
+
+                        <li>Supports beneficial microorganisms</li>
+
+                        <li>Helps maintain agricultural productivity</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SOIL TYPES ================= -->
+
+    <section class="section light-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    SOIL TYPES
+                </span>
+
+                <h2>
+                    Common Types of Soil
+                </h2>
+
+                <p>
+                    Different soils have different properties and may be suitable
+                    for different crops and farming systems.
+                </p>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🟤
+                    </div>
+
+                    <h3>
+                        Sandy Soil
+                    </h3>
+
+                    <p>
+                        Sandy soil has relatively large particles and generally
+                        drains water quickly. Organic matter can help improve
+                        its water and nutrient retention.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🌱
+                    </div>
+
+                    <h3>
+                        Clay Soil
+                    </h3>
+
+                    <p>
+                        Clay soil contains very fine particles and can hold
+                        considerable amounts of water and nutrients. Good
+                        management helps maintain its structure.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🌾
+                    </div>
+
+                    <h3>
+                        Loamy Soil
+                    </h3>
+
+                    <p>
+                        Loam contains a balanced mixture of sand, silt, and clay
+                        and is often considered favorable for many agricultural
+                        crops.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        💧
+                    </div>
+
+                    <h3>
+                        Silt Soil
+                    </h3>
+
+                    <p>
+                        Silt particles are smaller than sand and can hold more
+                        moisture. Maintaining good structure is important because
+                        silt can be vulnerable to erosion.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🍂
+                    </div>
+
+                    <h3>
+                        Peaty Soil
+                    </h3>
+
+                    <p>
+                        Peaty soils contain high levels of organic material.
+                        Their properties can vary significantly depending on
+                        their environment and management.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🪨
+                    </div>
+
+                    <h3>
+                        Chalky Soil
+                    </h3>
+
+                    <p>
+                        Chalky soils contain calcium carbonate and can have
+                        relatively high pH values. Crop selection and nutrient
+                        management are important.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SOIL NUTRIENTS ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    PLANT NUTRITION
+                </span>
+
+                <h2>
+                    Essential Soil Nutrients
+                </h2>
+
+                <p>
+                    Plants require several nutrients for healthy growth and
+                    development.
+                </p>
+
+            </div>
+
+
+            <div class="technology-grid">
+
+                <div class="technology-card">
+
+                    <div class="technology-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Nitrogen (N)
+                    </h3>
+
+                    <p>
+                        Nitrogen is important for vegetative growth and the
+                        formation of chlorophyll and proteins.
+                    </p>
+
+                </div>
+
+
+                <div class="technology-card">
+
+                    <div class="technology-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Phosphorus (P)
+                    </h3>
+
+                    <p>
+                        Phosphorus plays an important role in root development,
+                        energy transfer, and reproductive growth.
+                    </p>
+
+                </div>
+
+
+                <div class="technology-card">
+
+                    <div class="technology-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Potassium (K)
+                    </h3>
+
+                    <p>
+                        Potassium contributes to water regulation, enzyme activity,
+                        and overall plant strength.
+                    </p>
+
+                </div>
+
+
+                <div class="technology-card">
+
+                    <div class="technology-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Organic Matter
+                    </h3>
+
+                    <p>
+                        Organic matter can improve soil structure, water retention,
+                        nutrient cycling, and biological activity.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SOIL TESTING ================= -->
+
+    <section class="sustainability-section">
+
+        <div class="container">
+
+            <div class="sustainability-content">
+
+                <div>
+
+                    <span class="section-label">
+                        SOIL TESTING
+                    </span>
+
+                    <h2>
+                        Test Your Soil Before Fertilizing
+                    </h2>
+
+                    <p>
+                        Soil testing can provide useful information about soil
+                        properties and nutrient levels. Farmers can use test
+                        results to make more informed nutrient-management decisions.
+                    </p>
+
+                </div>
+
+
+                <div class="sustainability-list">
+
+                    <div class="sustain-item">
+
+                        <span>🧪</span>
+
+                        <div>
+
+                            <h3>
+                                Collect a Soil Sample
+                            </h3>
+
+                            <p>
+                                Collect representative samples from the field using
+                                an appropriate sampling method.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="sustain-item">
+
+                        <span>📊</span>
+
+                        <div>
+
+                            <h3>
+                                Analyze the Soil
+                            </h3>
+
+                            <p>
+                                A soil laboratory can analyze important properties
+                                such as pH and nutrient levels.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="sustain-item">
+
+                        <span>🌱</span>
+
+                        <div>
+
+                            <h3>
+                                Plan Nutrient Management
+                            </h3>
+
+                            <p>
+                                Use soil-test information along with crop requirements
+                                to plan nutrient applications.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SOIL MANAGEMENT ================= -->
+
+    <section class="section light-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    BEST PRACTICES
+                </span>
+
+                <h2>
+                    Soil Management Practices
+                </h2>
+
+                <p>
+                    Practical approaches for protecting and improving agricultural
+                    soil.
+                </p>
+
+            </div>
+
+
+            <div class="tips-grid">
+
+                <div class="tip-card">
+
+                    <h3>
+                        🌿 Add Organic Matter
+                    </h3>
+
+                    <p>
+                        Compost, crop residues, and other suitable organic materials
+                        can contribute to soil organic matter.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        ♻️ Practice Crop Rotation
+                    </h3>
+
+                    <p>
+                        Crop rotation can diversify production and help manage
+                        nutrient use, pests, and diseases.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        🌾 Use Cover Crops
+                    </h3>
+
+                    <p>
+                        Cover crops can help protect the soil surface and may
+                        contribute organic matter to the soil.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        💧 Manage Irrigation
+                    </h3>
+
+                    <p>
+                        Appropriate irrigation helps avoid excessive water use,
+                        waterlogging, and nutrient losses.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        🚜 Reduce Excessive Tillage
+                    </h3>
+
+                    <p>
+                        Suitable reduced-tillage practices can help protect soil
+                        structure and reduce erosion in some farming systems.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        🛡️ Prevent Erosion
+                    </h3>
+
+                    <p>
+                        Vegetative cover, contour farming, mulching, and other
+                        conservation practices can help reduce soil erosion.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= SOIL HEALTH CHECK ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    QUICK GUIDE
+                </span>
+
+                <h2>
+                    Soil Health Checklist
+                </h2>
+
+                <p>
+                    A simple checklist for understanding important aspects of
+                    soil management.
+                </p>
+
+            </div>
+
+
+            <div class="table-wrapper">
+
+                <table class="data-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Soil Factor
+                            </th>
+
+                            <th>
+                                Why It Matters
+                            </th>
+
+                            <th>
+                                Management Focus
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Soil pH
+                            </td>
+
+                            <td>
+                                Influences nutrient availability
+                            </td>
+
+                            <td>
+                                Test regularly and manage according to crop needs
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Organic Matter
+                            </td>
+
+                            <td>
+                                Supports soil structure and biological activity
+                            </td>
+
+                            <td>
+                                Use suitable organic inputs and retain crop residues
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Moisture
+                            </td>
+
+                            <td>
+                                Necessary for plant growth
+                            </td>
+
+                            <td>
+                                Use appropriate irrigation and drainage
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Nutrients
+                            </td>
+
+                            <td>
+                                Support crop growth and development
+                            </td>
+
+                            <td>
+                                Base fertilizer decisions on crop needs and soil tests
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Soil Structure
+                            </td>
+
+                            <td>
+                                Affects roots, water movement, and air spaces
+                            </td>
+
+                            <td>
+                                Reduce damaging practices and add organic matter
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta-section">
+
+        <div class="container">
+
+            <div class="cta-content">
+
+                <div>
+
+                    <span class="section-label">
+                        SMART FARMING
+                    </span>
+
+                    <h2>
+                        Healthy Soil, Better Agriculture
+                    </h2>
+
+                    <p>
+                        Combine soil testing, good nutrient management, water
+                        conservation, and sustainable farming practices.
+                    </p>
+
+                </div>
+
+                <a href="irrigation.html" class="btn btn-primary">
+                    Explore Irrigation
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <a href="index.html" class="logo footer-logo">
+                        Agri<span>Vision</span> 🌱
+                    </a>
+
+                    <p>
+                        A student agriculture project focused on smart farming,
+                        sustainability, soil management, irrigation, and modern
+                        agricultural technology.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="technology.html">
+                        Technology
+                    </a>
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>
+                        Agriculture
+                    </h3>
+
+                    <a href="soil.html">
+                        Soil Management
+                    </a>
+
+                    <a href="irrigation.html">
+                        Irrigation
+                    </a>
+
+                    <a href="technology.html">
+                        Smart Technology
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                © <span id="year"></span> AgriVision |
+                Agriculture Project
+
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

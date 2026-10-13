@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgriVision - Pest & Disease Management</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Agri<span>Vision</span> 🌱
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="irrigation.html">Irrigation</a></li>
+                <li><a href="soil.html">Soil</a></li>
+                <li><a href="weather.html" class="active">Weather</a></li>
+                <li><a href="pests.html">Pests</a></li>
+                <li><a href="tips.html" class="active">Tips</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div style="display:flex; gap:10px; align-items:center;">
+
+                <button class="theme-btn" id="themeBtn" title="Toggle dark mode">
+                    🌙
+                </button>
+
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE HERO ================= -->
+
+    <section class="page-hero">
+
+        <div class="container page-hero-content">
+
+            <span class="badge">
+                🐛 Smart Crop Protection
+            </span>
+
+            <h1>
+                Pest & Disease Management
+            </h1>
+
+            <p>
+                Learn how to identify common agricultural pests and crop diseases,
+                understand their causes, and use safe and effective management
+                practices to protect your crops.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= INTRODUCTION ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    CROP PROTECTION
+                </span>
+
+                <h2>
+                    Protect Your Crops
+                </h2>
+
+                <p>
+                    Early identification and proper crop management can help reduce
+                    crop losses and maintain healthy agricultural production.
+                </p>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🔍
+                    </div>
+
+                    <h3>
+                        Early Detection
+                    </h3>
+
+                    <p>
+                        Regularly inspect leaves, stems, roots, fruits, and soil for
+                        unusual spots, insects, discoloration, wilting, or other signs
+                        of crop problems.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🌱
+                    </div>
+
+                    <h3>
+                        Healthy Crops
+                    </h3>
+
+                    <p>
+                        Healthy soil, balanced nutrition, appropriate irrigation,
+                        sanitation, and suitable crop varieties can reduce crop stress
+                        and improve resilience.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🛡️
+                    </div>
+
+                    <h3>
+                        Integrated Management
+                    </h3>
+
+                    <p>
+                        Integrated Pest Management combines monitoring, prevention,
+                        biological methods, cultural practices, and carefully selected
+                        controls when necessary.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COMMON PESTS ================= -->
+
+    <section class="section light-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    COMMON PESTS
+                </span>
+
+                <h2>
+                    Major Agricultural Pests
+                </h2>
+
+                <p>
+                    Some common pests that can affect agricultural crops.
+                </p>
+
+            </div>
+
+
+            <div class="crop-grid">
+
+
+                <!-- Aphids -->
+
+                <div class="crop-card" data-name="aphids">
+
+                    <img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=800&q=80"
+                        alt="Plant affected by insects">
+
+                    <div class="crop-info">
+
+                        <h3>
+                            🐜 Aphids
+                        </h3>
+
+                        <p>
+                            Small insects that feed on plant sap and may cause curled,
+                            yellowing, or distorted leaves.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Caterpillars -->
+
+                <div class="crop-card" data-name="caterpillar caterpillars">
+
+                    <img src="https://images.unsplash.com/photo-1509423350716-97f9360b4e09?auto=format&fit=crop&w=800&q=80"
+                        alt="Green leaves">
+
+                    <div class="crop-info">
+
+                        <h3>
+                            🐛 Caterpillars
+                        </h3>
+
+                        <p>
+                            Larvae of moths and butterflies that can chew leaves and
+                            damage young shoots and fruits.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Whiteflies -->
+
+                <div class="crop-card" data-name="whitefly whiteflies">
+
+                    <img src="https://images.unsplash.com/photo-1497250681960-ef046c08a56e?auto=format&fit=crop&w=800&q=80"
+                        alt="Green plant leaves">
+
+                    <div class="crop-info">
+
+                        <h3>
+                            🪰 Whiteflies
+                        </h3>
+
+                        <p>
+                            Small sap-feeding insects that can weaken plants and may
+                            contribute to the spread of some plant diseases.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Stem Borers -->
+
+                <div class="crop-card" data-name="stem borer stem borers">
+
+                    <img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=800&q=80"
+                        alt="Agricultural crop">
+
+                    <div class="crop-info">
+
+                        <h3>
+                            🪲 Stem Borers
+                        </h3>
+
+                        <p>
+                            Insect larvae that tunnel into stems of crops and can interfere
+                            with plant growth and nutrient movement.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= COMMON DISEASES ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    CROP DISEASES
+                </span>
+
+                <h2>
+                    Common Crop Diseases
+                </h2>
+
+                <p>
+                    Crop diseases may be caused by fungi, bacteria, viruses, nematodes,
+                    or unfavorable environmental conditions.
+                </p>
+
+            </div>
+
+
+            <div class="technology-grid">
+
+
+                <div class="technology-card">
+
+                    <div class="technology-number">
+                        01
+                    </div>
+
+                    <h3>
+                        🍂 Fungal Diseases
+                    </h3>
+
+                    <p>
+                        Fungal pathogens can cause leaf spots, blights, rots, wilting,
+                        and other symptoms. Moist conditions may favor some fungal
+                        diseases.
+                    </p>
+
+                </div>
+
+
+                <div class="technology-card">
+
+                    <div class="technology-number">
+                        02
+                    </div>
+
+                    <h3>
+                        🦠 Viral Diseases
+                    </h3>
+
+                    <p>
+                        Plant viruses can cause mosaic patterns, yellowing, stunting,
+                        leaf distortion, and reduced plant growth.
+                    </p>
+
+                </div>
+
+
+                <div class="technology-card">
+
+                    <div class="technology-number">
+                        03
+                    </div>
+
+                    <h3>
+                        🧫 Bacterial Diseases
+                    </h3>
+
+                    <p>
+                        Bacterial infections may produce water-soaked lesions, spots,
+                        rots, wilting, or tissue damage depending on the crop.
+                    </p>
+
+                </div>
+
+
+                <div class="technology-card">
+
+                    <div class="technology-number">
+                        04
+                    </div>
+
+                    <h3>
+                        🌱 Root Diseases
+                    </h3>
+
+                    <p>
+                        Root problems can reduce water and nutrient uptake and may result
+                        from pathogens, poor drainage, or other soil-related conditions.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= IPM ================= -->
+
+    <section class="sustainability-section">
+
+        <div class="container">
+
+            <div class="sustainability-content">
+
+                <div>
+
+                    <span class="section-label">
+                        SMART PROTECTION
+                    </span>
+
+                    <h2>
+                        Integrated Pest Management
+                    </h2>
+
+                    <p>
+                        Integrated Pest Management, or IPM, focuses on preventing and
+                        managing pests while minimizing unnecessary risks to people,
+                        beneficial organisms, and the environment.
+                    </p>
+
+                </div>
+
+
+                <div class="sustainability-list">
+
+                    <div class="sustain-item">
+
+                        <span>🔎</span>
+
+                        <div>
+
+                            <h3>
+                                Monitor Regularly
+                            </h3>
+
+                            <p>
+                                Inspect crops frequently and record pest levels and symptoms.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="sustain-item">
+
+                        <span>🌾</span>
+
+                        <div>
+
+                            <h3>
+                                Cultural Practices
+                            </h3>
+
+                            <p>
+                                Use crop rotation, sanitation, resistant varieties, and
+                                suitable planting practices.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="sustain-item">
+
+                        <span>🐞</span>
+
+                        <div>
+
+                            <h3>
+                                Beneficial Organisms
+                            </h3>
+
+                            <p>
+                                Encourage natural enemies and beneficial insects where
+                                appropriate.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="sustain-item">
+
+                        <span>🛡️</span>
+
+                        <div>
+
+                            <h3>
+                                Appropriate Control
+                            </h3>
+
+                            <p>
+                                When intervention is needed, choose suitable and legally
+                                approved methods according to the crop and pest.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MANAGEMENT TIPS ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    FARMER GUIDE
+                </span>
+
+                <h2>
+                    Pest Prevention Tips
+                </h2>
+
+                <p>
+                    Simple practices that can help maintain healthier crops.
+                </p>
+
+            </div>
+
+
+            <div class="tips-grid">
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        🌱 Use Healthy Seeds
+                    </h3>
+
+                    <p>
+                        Start with quality planting material from reliable sources and
+                        select varieties suited to local growing conditions.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        🔍 Inspect Plants
+                    </h3>
+
+                    <p>
+                        Check the underside of leaves and young shoots regularly for
+                        insects, eggs, discoloration, and other symptoms.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        💧 Manage Irrigation
+                    </h3>
+
+                    <p>
+                        Avoid unnecessary irrigation and maintain suitable drainage to
+                        reduce conditions that can favor certain diseases.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        ♻️ Remove Infected Material
+                    </h3>
+
+                    <p>
+                        Where appropriate, remove and safely dispose of heavily infected
+                        plant material to reduce further spread.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        🐞 Protect Beneficial Insects
+                    </h3>
+
+                    <p>
+                        Encourage pollinators and natural enemies by maintaining
+                        suitable habitats and avoiding unnecessary broad-spectrum
+                        treatments.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>
+                        📱 Keep Farm Records
+                    </h3>
+
+                    <p>
+                        Record pest observations, crop stages, weather conditions,
+                        management actions, and results to improve future decisions.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WARNING ================= -->
+
+    <section class="section light-section">
+
+        <div class="container">
+
+            <div class="cta-content">
+
+                <div>
+
+                    <span class="section-label">
+                        IMPORTANT
+                    </span>
+
+                    <h2>
+                        Identify Before You Treat
+                    </h2>
+
+                    <p>
+                        Similar symptoms can have different causes. Confirm the pest or
+                        disease and follow local agricultural guidance before using any
+                        pesticide or other treatment.
+                    </p>
+
+                </div>
+
+                <a href="dashboard.html" class="btn btn-primary">
+                    Open Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <a href="index.html" class="logo footer-logo">
+                        Agri<span>Vision</span> 🌱
+                    </a>
+
+                    <p>
+                        A smart agriculture project focused on modern farming,
+                        sustainability, crop management, and agricultural technology.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="technology.html">Technology</a>
+                    <a href="weather.html">Weather</a>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>
+                        Agriculture
+                    </h3>
+
+                    <a href="soil.html">Soil Management</a>
+                    <a href="irrigation.html">Irrigation</a>
+                    <a href="pests.html">Pest Management</a>
+                    <a href="sustainable.html">Sustainable Farming</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © <span id="year">2026</span> AgriVision |
+                    Agriculture Project
+                </p>
+
+                <p>
+                    Built with HTML • CSS • JavaScript 🌱
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

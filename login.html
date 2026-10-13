@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AgriVision - Login</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .login-page {
+      min-height: calc(100vh - 72px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 20px;
+
+      background:
+        linear-gradient(
+          rgba(23, 59, 26, 0.82),
+          rgba(23, 59, 26, 0.82)
+        ),
+        url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .login-box {
+      width: min(430px, 100%);
+      padding: 40px;
+
+      background: white;
+      border-radius: 22px;
+
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-logo {
+      text-align: center;
+      color: #2e7d32;
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .login-logo span {
+      color: #ffb300;
+    }
+
+    .login-title {
+      text-align: center;
+      color: #173b1a;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .login-subtitle {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .login-group {
+      margin-bottom: 20px;
+    }
+
+    .login-group label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .login-group input {
+      width: 100%;
+      padding: 14px 15px;
+
+      border: 1px solid #dfe9df;
+      border-radius: 10px;
+
+      outline: none;
+      font-size: 15px;
+    }
+
+    .login-group input:focus {
+      border-color: #2e7d32;
+      box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.08);
+    }
+
+    .login-btn {
+      width: 100%;
+      margin-top: 5px;
+    }
+
+    .login-message {
+      display: none;
+
+      margin-top: 18px;
+      padding: 12px;
+
+      border-radius: 8px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .login-message.error {
+      display: block;
+      background: #ffebee;
+      color: #c62828;
+    }
+
+    .demo-login {
+      margin-top: 22px;
+      padding: 14px;
+
+      background: #edf7ee;
+      border-radius: 10px;
+
+      text-align: center;
+      font-size: 13px;
+      color: #356238;
+    }
+
+    .back-home {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+
+      color: #2e7d32;
+      font-weight: 600;
+    }
+
+    body.dark .login-box {
+      background: #192119;
+    }
+
+    body.dark .login-title {
+      color: #b7e6ba;
+    }
+
+    body.dark .login-subtitle {
+      color: #b8c0b8;
+    }
+
+    body.dark .login-group input {
+      background: #111811;
+      color: white;
+      border-color: #3a4b3b;
+    }
+
+    body.dark .demo-login {
+      background: #203020;
+      color: #b7e6ba;
+    }
+
+    @media (max-width: 500px) {
+      .login-box {
+        padding: 28px 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+
+  <header class="header">
+
+    <div class="container navbar">
+
+      <a href="index.html" class="logo">
+        Agri<span>Vision</span> 🌱
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+
+        <li>
+          <a href="about.html">About</a>
+        </li>
+
+        <li>
+          <a href="technology.html">Technology</a>
+        </li>
+
+        <li>
+          <a href="irrigation.html">Irrigation</a>
+        </li>
+
+        <li>
+          <a href="soil.html">Soil</a>
+        </li>
+
+        <li>
+          <a href="weather.html">Weather</a>
+        </li>
+
+        <li>
+          <a href="pests.html">Pests</a>
+        </li>
+
+        <li>
+          <a href="login.html" class="active">Login</a>
+        </li>
+
+      </ul>
+
+      <div style="display:flex; gap:10px; align-items:center;">
+
+        <button
+          class="theme-btn"
+          id="themeBtn"
+          title="Toggle dark mode">
+          🌙
+        </button>
+
+        <button
+          class="menu-btn"
+          id="menuBtn">
+          ☰
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= LOGIN ================= -->
+
+  <main>
+
+    <section class="login-page">
+
+      <div class="login-box">
+
+        <div class="login-logo">
+          Agri<span>Vision</span> 🌱
+        </div>
+
+        <h1 class="login-title">
+          Welcome Back
+        </h1>
+
+        <p class="login-subtitle">
+          Login to access your farm dashboard.
+        </p>
+
+
+        <form id="loginForm">
+
+          <div class="login-group">
+
+            <label for="username">
+              Username
+            </label>
+
+            <input
+              type="text"
+              id="username"
+              placeholder="Enter username"
+              autocomplete="username"
+              required>
+
+          </div>
+
+
+          <div class="login-group">
+
+            <label for="password">
+              Password
+            </label>
+
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter password"
+              autocomplete="current-password"
+              required>
+
+          </div>
+
+
+          <button
+            type="submit"
+            class="btn btn-green login-btn">
+            Login to Dashboard
+          </button>
+
+
+          <div
+            class="login-message"
+            id="loginMessage">
+          </div>
+
+        </form>
+
+
+        <div class="demo-login">
+
+          <strong>Demo Login</strong><br>
+
+          Username: <strong>farmer</strong><br>
+          Password: <strong>1234</strong>
+
+        </div>
+
+
+        <a
+          href="index.html"
+          class="back-home">
+          ← Back to Home
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="footer-bottom">
+
+      © <span id="year">2026</span>
+      AgriVision | Agriculture Management Project 🌱
+
+    </div>
+
+  </footer>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script src="script.js"></script>
+
+  <script>
+
+    const loginForm =
+      document.getElementById("loginForm");
+
+    const loginMessage =
+      document.getElementById("loginMessage");
+
+
+    loginForm.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+
+      const username =
+        document.getElementById("username").value.trim();
+
+      const password =
+        document.getElementById("password").value;
+
+
+      /*
+        Demo authentication
+
+        Username: farmer
+        Password: 1234
+      */
+
+      if (
+        username === "farmer" &&
+        password === "1234"
+      ) {
+
+        // Save login status
+        sessionStorage.setItem(
+          "agrivisionLoggedIn",
+          "true"
+        );
+
+        sessionStorage.setItem(
+          "agrivisionUser",
+          username
+        );
+
+
+        // Open dashboard
+        window.location.href =
+          "dashboard.html";
+
+      } else {
+
+        loginMessage.textContent =
+          "❌ Invalid username or password.";
+
+        loginMessage.className =
+          "login-message error";
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>

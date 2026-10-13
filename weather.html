@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriVision - Weather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body> <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Agri<span>Vision</span> 🌱
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="irrigation.html">Irrigation</a></li>
+                <li><a href="soil.html">Soil</a></li>
+                <li><a href="weather.html" class="active">Weather</a></li>
+                <li><a href="pests.html">Pests</a></li>
+                <li><a href="tips.html" class="active">Tips</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div style="display:flex; gap:10px;">
+
+                <button class="theme-btn" id="themeBtn" title="Toggle dark mode">
+                    🌙
+                </button>
+
+                <button class="menu-btn" id="menuBtn" title="Menu">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header> <!-- ================= PAGE HERO ================= -->
+    <section class="page-hero">
+        <div class="container page-hero-content">
+
+            <span class="badge">
+                🌦️ Smart Agriculture
+            </span>
+
+            <h1>Weather & Farming</h1>
+
+            <p>
+                Weather plays an important role in agriculture. Monitor
+                temperature, rainfall, humidity and wind conditions to
+                make better farming decisions.
+            </p>
+
+        </div>
+
+    </section> <!-- ================= WEATHER SEARCH ================= -->
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    WEATHER INFORMATION
+                </span>
+
+                <h2>Check Farm Weather</h2>
+
+                <p>
+                    Enter your location to view sample agricultural
+                    weather information.
+                </p>
+
+            </div>
+
+
+            <div class="calculator-box">
+
+                <div class="form-group">
+
+                    <label for="location">
+                        📍 Farm Location
+                    </label>
+
+                    <input type="text" id="location" placeholder="Example: Deoria, Uttar Pradesh">
+
+                </div>
+
+                <button class="btn btn-green" id="weatherBtn">
+                    Check Weather
+                </button>
+
+            </div>
+
+        </div>
+
+    </section> <!-- ================= CURRENT WEATHER ================= -->
+    <section class="section light-section">
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    CURRENT CONDITIONS
+                </span>
+
+                <h2 id="weatherLocation">
+                    Farm Weather
+                </h2>
+
+                <p>
+                    Current agricultural weather indicators
+                </p>
+
+            </div>
+
+
+            <div class="dashboard-grid">
+
+                <!-- Temperature -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+                        🌡️
+                    </div>
+
+                    <h3>Temperature</h3>
+
+                    <div class="dashboard-value">
+                        <span id="temperature">28</span>°C
+                    </div>
+
+                    <p>
+                        Moderate temperature
+                    </p>
+
+                </div>
+
+
+                <!-- Humidity -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+                        💧
+                    </div>
+
+                    <h3>Humidity</h3>
+
+                    <div class="dashboard-value">
+                        <span id="humidity">68</span>%
+                    </div>
+
+                    <p>
+                        Suitable for many crops
+                    </p>
+
+                </div>
+
+
+                <!-- Rainfall -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+                        🌧️
+                    </div>
+
+                    <h3>Rainfall</h3>
+
+                    <div class="dashboard-value">
+                        <span id="rainfall">12</span> mm
+                    </div>
+
+                    <p>
+                        Expected rainfall
+                    </p>
+
+                </div>
+
+
+                <!-- Wind -->
+
+                <div class="dashboard-card">
+
+                    <div class="dashboard-card-icon">
+                        🌬️
+                    </div>
+
+                    <h3>Wind Speed</h3>
+
+                    <div class="dashboard-value">
+                        <span id="wind">14</span> km/h
+                    </div>
+
+                    <p>
+                        Moderate wind
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section> <!-- ================= WEATHER STATUS ================= -->
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    FARMING CONDITIONS
+                </span>
+
+                <h2>Today's Conditions</h2>
+
+                <p>
+                    Weather conditions can affect irrigation,
+                    spraying, planting and harvesting.
+                </p>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        ☀️
+                    </div>
+
+                    <h3>Sunny Conditions</h3>
+
+                    <p>
+                        Good sunlight can support photosynthesis and
+                        crop growth. Monitor soil moisture during hot
+                        and sunny periods.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        💧
+                    </div>
+
+                    <h3>Soil Moisture</h3>
+
+                    <p>
+                        Check soil moisture before irrigation. Avoid
+                        unnecessary watering when rainfall is expected.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🌧️
+                    </div>
+
+                    <h3>Rainfall</h3>
+
+                    <p>
+                        Rainfall forecasts can help farmers plan
+                        irrigation and protect crops from excessive
+                        water.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🌬️
+                    </div>
+
+                    <h3>Wind Conditions</h3>
+
+                    <p>
+                        Strong winds can damage crops and affect
+                        spraying operations.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🌡️
+                    </div>
+
+                    <h3>Temperature</h3>
+
+                    <p>
+                        Temperature affects crop growth, flowering,
+                        germination and water requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🐛
+                    </div>
+
+                    <h3>Pest Risk</h3>
+
+                    <p>
+                        Warm and humid conditions can sometimes
+                        increase the risk of certain crop pests
+                        and diseases.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section> <!-- ================= 5 DAY FORECAST ================= -->
+    <section class="section light-section">
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    FORECAST
+                </span>
+
+                <h2>5-Day Farm Forecast</h2>
+
+                <p>
+                    Example forecast for agricultural planning.
+                </p>
+
+            </div>
+
+
+            <div class="crop-grid">
+
+                <!-- Day 1 -->
+
+                <div class="crop-card">
+
+                    <div class="crop-info">
+
+                        <h3>☀️ Today</h3>
+
+                        <p>
+                            <strong>28°C</strong>
+                        </p>
+
+                        <p>
+                            Humidity: 68%
+                        </p>
+
+                        <p>
+                            Rain: 20%
+                        </p>
+
+                        <p>
+                            Wind: 14 km/h
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Day 2 -->
+
+                <div class="crop-card">
+
+                    <div class="crop-info">
+
+                        <h3>🌤️ Tomorrow</h3>
+
+                        <p>
+                            <strong>30°C</strong>
+                        </p>
+
+                        <p>
+                            Humidity: 62%
+                        </p>
+
+                        <p>
+                            Rain: 15%
+                        </p>
+
+                        <p>
+                            Wind: 12 km/h
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Day 3 -->
+
+                <div class="crop-card">
+
+                    <div class="crop-info">
+
+                        <h3>🌦️ Day 3</h3>
+
+                        <p>
+                            <strong>27°C</strong>
+                        </p>
+
+                        <p>
+                            Humidity: 72%
+                        </p>
+
+                        <p>
+                            Rain: 45%
+                        </p>
+
+                        <p>
+                            Wind: 16 km/h
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Day 4 -->
+
+                <div class="crop-card">
+
+                    <div class="crop-info">
+
+                        <h3>🌧️ Day 4</h3>
+
+                        <p>
+                            <strong>25°C</strong>
+                        </p>
+
+                        <p>
+                            Humidity: 78%
+                        </p>
+
+                        <p>
+                            Rain: 65%
+                        </p>
+
+                        <p>
+                            Wind: 18 km/h
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Day 5 -->
+
+                <div class="crop-card">
+
+                    <div class="crop-info">
+
+                        <h3>🌤️ Day 5</h3>
+
+                        <p>
+                            <strong>29°C</strong>
+                        </p>
+
+                        <p>
+                            Humidity: 65%
+                        </p>
+
+                        <p>
+                            Rain: 25%
+                        </p>
+
+                        <p>
+                            Wind: 13 km/h
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section> <!-- ================= FARMING RECOMMENDATIONS ================= -->
+    <section class="section">
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    FARM ADVICE
+                </span>
+
+                <h2>Weather-Based Farming Tips</h2>
+
+                <p>
+                    Use weather information as one factor when
+                    planning agricultural activities.
+                </p>
+
+            </div>
+
+
+            <div class="tips-grid">
+
+                <div class="tip-card">
+
+                    <h3>💧 Irrigation</h3>
+
+                    <p>
+                        Check rainfall forecasts and soil moisture
+                        before irrigation to reduce unnecessary
+                        water use.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>🌱 Planting</h3>
+
+                    <p>
+                        Plan planting according to crop requirements,
+                        soil conditions and suitable weather.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>🌧️ Heavy Rain</h3>
+
+                    <p>
+                        During heavy rainfall, ensure proper drainage
+                        to reduce waterlogging around crop roots.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>🌬️ Strong Wind</h3>
+
+                    <p>
+                        Avoid spraying during unsuitable windy
+                        conditions and protect vulnerable crops.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>☀️ Hot Weather</h3>
+
+                    <p>
+                        Monitor crops and soil moisture during
+                        prolonged hot and dry periods.
+                    </p>
+
+                </div>
+
+
+                <div class="tip-card">
+
+                    <h3>🐛 Disease Monitoring</h3>
+
+                    <p>
+                        Regularly inspect crops when warm and humid
+                        weather creates favorable conditions for
+                        certain diseases.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section> <!-- ================= CTA ================= -->
+    <section class="cta-section">
+        <div class="container">
+
+            <div class="cta-content">
+
+                <div>
+
+                    <span class="section-label">
+                        SMART FARMING
+                    </span>
+
+                    <h2>
+                        Make Better Farming Decisions
+                    </h2>
+
+                    <p>
+                        Combine weather information with soil,
+                        irrigation and crop data.
+                    </p>
+
+                </div>
+
+                <a href="dashboard.html" class="btn btn-primary">
+                    Open Dashboard →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section> <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <a href="index.html" class="logo footer-logo">
+                        Agri<span>Vision</span> 🌱
+                    </a>
+
+                    <p>
+                        A student agriculture project focused on
+                        smart farming, sustainability and
+                        technology-driven agriculture.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="technology.html">Technology</a>
+                    <a href="dashboard.html">Dashboard</a>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>Resources</h3>
+
+                    <a href="weather.html">Weather</a>
+                    <a href="soil.html">Soil</a>
+                    <a href="irrigation.html">Irrigation</a>
+                    <a href="tips.html">Farming Tips</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                © <span id="year">2026</span>
+                AgriVision | Agriculture Project
+
+            </div>
+
+        </div>
+
+    </footer> <!-- ================= WEATHER SCRIPT ================= -->
+    <script> const weatherBtn = document.getElementById("weatherBtn");
+        const locationInput = document.getElementById("location");
+        const weatherLocation = document.getElementById("weatherLocation");
+        weatherBtn.addEventListener("click", function () {
+            const location = locationInput.value.trim();
+            if (!location) {
+                alert("Please enter your farm location.");
+                locationInput.focus(); return;
+            } weatherLocation.textContent = "Weather - " + location;
+            const temperature = document.getElementById("temperature"); const humidity = document.getElementById("humidity"); const rainfall = document.getElementById("rainfall"); const wind = document.getElementById("wind"); temperature.textContent = Math.floor(24 + Math.random() * 8); humidity.textContent = Math.floor(55 + Math.random() * 25); rainfall.textContent = Math.floor(Math.random() * 25); wind.textContent = Math.floor(8 + Math.random() * 15); alert("Weather information updated for " + location + ".");
+        }); // Enter key support locationInput.addEventListener( "keydown", function (event) { if (event.key === "Enter") { event.preventDefault(); weatherBtn.click(); } } ); // Current year document.getElementById("year").textContent = new Date().getFullYear();
+        //  </script> <!-- Existing project JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

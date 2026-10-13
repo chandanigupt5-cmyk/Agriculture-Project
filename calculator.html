@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgriVision - Agriculture Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Calculator page specific styles */
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .calculator-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+
+        .calculator-icon {
+            width: 65px;
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-section);
+            border-radius: 15px;
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        .calculator-card h3 {
+            color: var(--dark-green);
+            font-size: 23px;
+            margin-bottom: 8px;
+        }
+
+        .calculator-card>p {
+            color: var(--text-light);
+            margin-bottom: 22px;
+        }
+
+        .calculator-result {
+            display: none;
+            margin-top: 20px;
+            padding: 18px;
+            background: var(--light-section);
+            color: var(--dark-green);
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .calculator-result.show {
+            display: block;
+        }
+
+        .calculator-result .big-result {
+            display: block;
+            color: var(--primary);
+            font-size: 28px;
+            font-weight: 800;
+            margin: 5px 0;
+        }
+
+        .calculator-note {
+            margin-top: 35px;
+            padding: 22px;
+            background: #fff8e1;
+            border-left: 5px solid var(--secondary);
+            border-radius: 10px;
+            color: #5d4b18;
+        }
+
+        body.dark .calculator-card {
+            background: var(--white);
+        }
+
+        body.dark .calculator-note {
+            background: #2b2819;
+            color: #e6d99b;
+        }
+
+        @media (max-width: 800px) {
+            .calculator-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ================= HEADER ================= -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">Agri<span>Vision</span> 🌱</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="irrigation.html">Irrigation</a></li>
+                <li><a href="soil.html">Soil</a></li>
+                <li><a href="weather.html" class="active">Weather</a></li>
+                <li><a href="pests.html">Pests</a></li>
+                <li><a href="tips.html" class="active">Tips</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div style="display:flex; gap:10px; align-items:center;">
+
+                <button class="theme-btn" id="themeBtn" title="Toggle dark mode">
+                    🌙
+                </button>
+
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= PAGE HERO ================= -->
+
+    <section class="page-hero">
+
+        <div class="container page-hero-content">
+
+            <span class="badge">
+                🧮 Smart Agriculture Tools
+            </span>
+
+            <h1>
+                Agriculture Calculator
+            </h1>
+
+            <p>
+                Use simple calculators to estimate crop production,
+                seed requirements, fertilizer quantity, and potential
+                farm revenue.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CALCULATORS ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    FARM CALCULATORS
+                </span>
+
+                <h2>
+                    Plan Your Farm Better
+                </h2>
+
+                <p>
+                    These calculators provide simple educational estimates
+                    for agricultural planning.
+                </p>
+
+            </div>
+
+
+            <div class="calculator-grid">
+
+
+                <!-- CROP YIELD -->
+
+                <div class="calculator-card">
+
+                    <div class="calculator-icon">
+                        🌾
+                    </div>
+
+                    <h3>
+                        Crop Yield Calculator
+                    </h3>
+
+                    <p>
+                        Estimate total crop production from your farm area.
+                    </p>
+
+                    <div class="form-group">
+
+                        <label for="yieldCrop">
+                            Select Crop
+                        </label>
+
+                        <select id="yieldCrop">
+
+                            <option value="2.5">
+                                Rice
+                            </option>
+
+                            <option value="3">
+                                Wheat
+                            </option>
+
+                            <option value="3.5">
+                                Maize
+                            </option>
+
+                            <option value="1.8">
+                                Cotton
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="yieldArea">
+                            Farm Area (hectares)
+                        </label>
+
+                        <input type="number" id="yieldArea" min="0" step="0.1" placeholder="Example: 2">
+
+                    </div>
+
+
+                    <button class="btn btn-green" id="yieldBtn">
+                        Calculate Yield
+                    </button>
+
+
+                    <div class="calculator-result" id="yieldResult"></div>
+
+                </div>
+
+
+                <!-- SEED CALCULATOR -->
+
+                <div class="calculator-card">
+
+                    <div class="calculator-icon">
+                        🌱
+                    </div>
+
+                    <h3>
+                        Seed Requirement
+                    </h3>
+
+                    <p>
+                        Estimate the amount of seed required for a selected
+                        crop and farm area.
+                    </p>
+
+
+                    <div class="form-group">
+
+                        <label for="seedCrop">
+                            Select Crop
+                        </label>
+
+                        <select id="seedCrop">
+
+                            <option value="25">
+                                Wheat — 25 kg/ha
+                            </option>
+
+                            <option value="20">
+                                Rice — 20 kg/ha
+                            </option>
+
+                            <option value="18">
+                                Maize — 18 kg/ha
+                            </option>
+
+                            <option value="5">
+                                Cotton — 5 kg/ha
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="seedArea">
+                            Farm Area (hectares)
+                        </label>
+
+                        <input type="number" id="seedArea" min="0" step="0.1" placeholder="Example: 2">
+
+                    </div>
+
+
+                    <button class="btn btn-green" id="seedBtn">
+                        Calculate Seeds
+                    </button>
+
+
+                    <div class="calculator-result" id="seedResult"></div>
+
+                </div>
+
+
+                <!-- FERTILIZER CALCULATOR -->
+
+                <div class="calculator-card">
+
+                    <div class="calculator-icon">
+                        🧪
+                    </div>
+
+                    <h3>
+                        Fertilizer Calculator
+                    </h3>
+
+                    <p>
+                        Estimate fertilizer quantity using a simple
+                        per-hectare application rate.
+                    </p>
+
+
+                    <div class="form-group">
+
+                        <label for="fertilizerRate">
+                            Fertilizer Rate (kg/hectare)
+                        </label>
+
+                        <input type="number" id="fertilizerRate" min="0" step="1" placeholder="Example: 100">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="fertilizerArea">
+                            Farm Area (hectares)
+                        </label>
+
+                        <input type="number" id="fertilizerArea" min="0" step="0.1" placeholder="Example: 2">
+
+                    </div>
+
+
+                    <button class="btn btn-green" id="fertilizerBtn">
+                        Calculate Fertilizer
+                    </button>
+
+
+                    <div class="calculator-result" id="fertilizerResult"></div>
+
+                </div>
+
+
+                <!-- REVENUE CALCULATOR -->
+
+                <div class="calculator-card">
+
+                    <div class="calculator-icon">
+                        💰
+                    </div>
+
+                    <h3>
+                        Farm Revenue Calculator
+                    </h3>
+
+                    <p>
+                        Estimate potential gross revenue from crop production.
+                    </p>
+
+
+                    <div class="form-group">
+
+                        <label for="revenueYield">
+                            Production (tonnes)
+                        </label>
+
+                        <input type="number" id="revenueYield" min="0" step="0.1" placeholder="Example: 5">
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="cropPrice">
+                            Crop Price (₹ per tonne)
+                        </label>
+
+                        <input type="number" id="cropPrice" min="0" step="100" placeholder="Example: 25000">
+
+                    </div>
+
+
+                    <button class="btn btn-green" id="revenueBtn">
+                        Calculate Revenue
+                    </button>
+
+
+                    <div class="calculator-result" id="revenueResult"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- NOTE -->
+
+            <div class="calculator-note">
+
+                <strong>
+                    ⚠️ Important:
+                </strong>
+
+                These calculators are for educational and planning
+                purposes only. Actual yield, seed rates, fertilizer
+                requirements, crop prices, and farm income can vary
+                depending on crop variety, soil, climate, farming
+                practices, local recommendations, and market conditions.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CALCULATION GUIDE ================= -->
+
+    <section class="section light-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    Simple Agriculture Formulas
+                </h2>
+
+                <p>
+                    Understand how the estimates are calculated.
+                </p>
+
+            </div>
+
+
+            <div class="info-grid">
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🌾
+                    </div>
+
+                    <h3>
+                        Crop Yield
+                    </h3>
+
+                    <p>
+                        Estimated production =
+                        Farm area × Estimated yield per hectare.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🌱
+                    </div>
+
+                    <h3>
+                        Seed Requirement
+                    </h3>
+
+                    <p>
+                        Estimated seed =
+                        Farm area × Seed rate per hectare.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🧪
+                    </div>
+
+                    <h3>
+                        Fertilizer
+                    </h3>
+
+                    <p>
+                        Estimated fertilizer =
+                        Farm area × Fertilizer rate per hectare.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        💰
+                    </div>
+
+                    <h3>
+                        Revenue
+                    </h3>
+
+                    <p>
+                        Gross revenue =
+                        Production × Price per tonne.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta-section">
+
+        <div class="container">
+
+            <div class="cta-content">
+
+                <div>
+
+                    <span class="section-label">
+                        SMART FARMING
+                    </span>
+
+                    <h2>
+                        Make Better Farming Decisions
+                    </h2>
+
+                    <p>
+                        Combine farm data, soil information, irrigation,
+                        weather, and technology for better planning.
+                    </p>
+
+                </div>
+
+                <a href="dashboard.html" class="btn btn-primary">
+                    Open Dashboard
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <a href="index.html" class="logo footer-logo">
+                        Agri<span>Vision</span> 🌱
+                    </a>
+
+                    <p>
+                        A student agriculture project focused on smart farming,
+                        sustainability, soil management, irrigation, and
+                        agricultural technology.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>
+                        Quick Links
+                    </h3>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="about.html">
+                        About
+                    </a>
+
+                    <a href="technology.html">
+                        Technology
+                    </a>
+
+                    <a href="dashboard.html">
+                        Dashboard
+                    </a>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>
+                        Tools
+                    </h3>
+
+                    <a href="calculator.html">
+                        Calculator
+                    </a>
+
+                    <a href="soil.html">
+                        Soil Management
+                    </a>
+
+                    <a href="irrigation.html">
+                        Irrigation
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                © <span id="year"></span> AgriVision |
+                Agriculture Project
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+
+    <script>
+
+        /* ==========================================
+           CROP YIELD CALCULATOR
+           ========================================== */
+
+        const yieldBtn =
+            document.getElementById("yieldBtn");
+
+        yieldBtn.addEventListener("click", () => {
+
+            const crop =
+                parseFloat(
+                    document.getElementById("yieldCrop").value
+                );
+
+            const area =
+                parseFloat(
+                    document.getElementById("yieldArea").value
+                );
+
+            const result =
+                document.getElementById("yieldResult");
+
+
+            if (isNaN(area) || area <= 0) {
+
+                result.classList.add("show");
+
+                result.innerHTML =
+                    "⚠️ Please enter a valid farm area.";
+
+                return;
+
+            }
+
+
+            const total =
+                crop * area;
+
+
+            result.classList.add("show");
+
+            result.innerHTML = `
+        Estimated Production
+        <span class="big-result">
+          ${total.toFixed(2)} tonnes
+        </span>
+        <small>
+          Educational estimate only.
+        </small>
+      `;
+
+        });
+
+
+        /* ==========================================
+           SEED CALCULATOR
+           ========================================== */
+
+        const seedBtn =
+            document.getElementById("seedBtn");
+
+        seedBtn.addEventListener("click", () => {
+
+            const seedRate =
+                parseFloat(
+                    document.getElementById("seedCrop").value
+                );
+
+            const area =
+                parseFloat(
+                    document.getElementById("seedArea").value
+                );
+
+            const result =
+                document.getElementById("seedResult");
+
+
+            if (isNaN(area) || area <= 0) {
+
+                result.classList.add("show");
+
+                result.innerHTML =
+                    "⚠️ Please enter a valid farm area.";
+
+                return;
+
+            }
+
+
+            const total =
+                seedRate * area;
+
+
+            result.classList.add("show");
+
+            result.innerHTML = `
+        Estimated Seed Requirement
+        <span class="big-result">
+          ${total.toFixed(2)} kg
+        </span>
+        <small>
+          Actual seed rate depends on crop and farming method.
+        </small>
+      `;
+
+        });
+
+
+        /* ==========================================
+           FERTILIZER CALCULATOR
+           ========================================== */
+
+        const fertilizerBtn =
+            document.getElementById("fertilizerBtn");
+
+        fertilizerBtn.addEventListener("click", () => {
+
+            const rate =
+                parseFloat(
+                    document.getElementById("fertilizerRate").value
+                );
+
+            const area =
+                parseFloat(
+                    document.getElementById("fertilizerArea").value
+                );
+
+            const result =
+                document.getElementById("fertilizerResult");
+
+
+            if (
+                isNaN(rate) ||
+                rate <= 0 ||
+                isNaN(area) ||
+                area <= 0
+            ) {
+
+                result.classList.add("show");
+
+                result.innerHTML =
+                    "⚠️ Please enter valid values.";
+
+                return;
+
+            }
+
+
+            const total =
+                rate * area;
+
+
+            result.classList.add("show");
+
+            result.innerHTML = `
+        Estimated Fertilizer
+        <span class="big-result">
+          ${total.toFixed(2)} kg
+        </span>
+        <small>
+          Follow soil-test and local agronomic recommendations
+          for actual fertilizer application.
+        </small>
+      `;
+
+        });
+
+
+        /* ==========================================
+           REVENUE CALCULATOR
+           ========================================== */
+
+        const revenueBtn =
+            document.getElementById("revenueBtn");
+
+        revenueBtn.addEventListener("click", () => {
+
+            const production =
+                parseFloat(
+                    document.getElementById("revenueYield").value
+                );
+
+            const price =
+                parseFloat(
+                    document.getElementById("cropPrice").value
+                );
+
+            const result =
+                document.getElementById("revenueResult");
+
+
+            if (
+                isNaN(production) ||
+                production <= 0 ||
+                isNaN(price) ||
+                price <= 0
+            ) {
+
+                result.classList.add("show");
+
+                result.innerHTML =
+                    "⚠️ Please enter valid production and price.";
+
+                return;
+
+            }
+
+
+            const revenue =
+                production * price;
+
+
+            result.classList.add("show");
+
+            result.innerHTML = `
+        Estimated Gross Revenue
+        <span class="big-result">
+          ₹${revenue.toLocaleString("en-IN")}
+        </span>
+        <small>
+          This does not include farming costs or losses.
+        </small>
+      `;
+
+        });
+
+    </script>
+
+</body>
+
+</html>

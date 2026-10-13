@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Crop Information | AgriVision</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <nav class="navbar container">
+
+            <a href="index.html" class="logo">
+                Agri<span>Vision</span> 🌱
+            </a>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="irrigation.html">Irrigation</a></li>
+                <li><a href="soil.html">Soil</a></li>
+                <li><a href="weather.html" class="active">Weather</a></li>
+                <li><a href="pests.html">Pests</a></li>
+                <li><a href="tips.html" class="active">Tips</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="theme-btn" id="themeBtn" title="Toggle dark mode">
+                🌙
+            </button>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================= PAGE HERO ================= -->
+
+    <section class="page-hero">
+
+        <div class="container page-hero-content">
+
+            <span class="badge">
+                🌾 Crop Knowledge Center
+            </span>
+
+            <h1>
+                Explore Agricultural Crops
+            </h1>
+
+            <p>
+                Learn about important food, fiber, oilseed, and commercial
+                crops and understand their basic growing requirements.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CROP SECTION ================= -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    CROP DATABASE
+                </span>
+
+                <h2>
+                    Find the Right Crop
+                </h2>
+
+                <p>
+                    Search by crop name or select a category.
+                </p>
+
+            </div>
+
+
+            <!-- Search -->
+
+            <input type="search" id="cropSearch" class="search-box" placeholder="🔍 Search for rice, wheat, maize..."
+                aria-label="Search crops">
+
+
+            <!-- Filter -->
+
+            <div class="crop-filter">
+
+                <button class="filter-btn active" data-filter="all">
+                    All Crops
+                </button>
+
+                <button class="filter-btn" data-filter="cereal">
+                    🌾 Cereals
+                </button>
+
+                <button class="filter-btn" data-filter="cash">
+                    💰 Cash Crops
+                </button>
+
+                <button class="filter-btn" data-filter="pulse">
+                    🫘 Pulses
+                </button>
+
+                <button class="filter-btn" data-filter="oilseed">
+                    🌻 Oilseeds
+                </button>
+
+                <button class="filter-btn" data-filter="vegetable">
+                    🥕 Vegetables
+                </button>
+
+            </div>
+
+
+            <!-- ================= CROP GRID ================= -->
+
+            <div class="crop-grid" id="cropGrid">
+
+
+                <!-- RICE -->
+
+                <article class="crop-card" data-name="rice paddy" data-category="cereal">
+
+                    <img src="https://images.unsplash.com/photo-1536304993881-ff6e9eefa2a6?auto=format&fit=crop&w=900&q=80"
+                        alt="Rice crop">
+
+                    <div class="crop-info">
+
+                        <h3>🌾 Rice</h3>
+
+                        <p>
+                            Rice is one of the world's major staple cereal crops.
+                            It generally grows best in warm conditions with
+                            sufficient water.
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong> Cereal
+                        </p>
+
+                        <p>
+                            <strong>Common uses:</strong> Food, flour, animal feed
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- WHEAT -->
+
+                <article class="crop-card" data-name="wheat" data-category="cereal">
+
+                    <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=900&q=80"
+                        alt="Wheat field">
+
+                    <div class="crop-info">
+
+                        <h3>🌾 Wheat</h3>
+
+                        <p>
+                            Wheat is a major cereal crop used to produce flour,
+                            bread, pasta, and many other foods.
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong> Cereal
+                        </p>
+
+                        <p>
+                            <strong>Common uses:</strong> Flour, bread, pasta
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MAIZE -->
+
+                <article class="crop-card" data-name="maize corn" data-category="cereal">
+
+                    <img src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&w=900&q=80"
+                        alt="Maize crop">
+
+                    <div class="crop-info">
+
+                        <h3>🌽 Maize</h3>
+
+                        <p>
+                            Maize is a versatile crop grown for human food,
+                            animal feed, and industrial applications.
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong> Cereal
+                        </p>
+
+                        <p>
+                            <strong>Common uses:</strong> Food, feed, industry
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- COTTON -->
+
+                <article class="crop-card" data-name="cotton" data-category="cash">
+
+                    <img src="https://images.unsplash.com/photo-1595341595379-cf0f0f5b6a0d?auto=format&fit=crop&w=900&q=80"
+                        alt="Cotton crop">
+
+                    <div class="crop-info">
+
+                        <h3>🌿 Cotton</h3>
+
+                        <p>
+                            Cotton is an important fiber crop and is widely used
+                            by the textile industry.
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong> Cash / Fiber Crop
+                        </p>
+
+                        <p>
+                            <strong>Common uses:</strong> Textile, clothing
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SUGARCANE -->
+
+                <article class="crop-card" data-name="sugarcane sugar cane" data-category="cash">
+
+                    <img src="https://images.unsplash.com/photo-1595855759920-86582396756a?auto=format&fit=crop&w=900&q=80"
+                        alt="Sugarcane field">
+
+                    <div class="crop-info">
+
+                        <h3>🎋 Sugarcane</h3>
+
+                        <p>
+                            Sugarcane is a tall grass cultivated mainly for
+                            producing sugar and related products.
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong> Cash Crop
+                        </p>
+
+                        <p>
+                            <strong>Common uses:</strong> Sugar, ethanol, jaggery
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PEA -->
+
+                <article class="crop-card" data-name="pea peas" data-category="pulse">
+
+                    <img src="https://images.unsplash.com/photo-1567375698348-5d9d5ae99de0?auto=format&fit=crop&w=900&q=80"
+                        alt="Green peas">
+
+                    <div class="crop-info">
+
+                        <h3>🫘 Pea</h3>
+
+                        <p>
+                            Peas are leguminous crops that provide plant-based
+                            protein and other nutrients.
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong> Pulse / Legume
+                        </p>
+
+                        <p>
+                            <strong>Common uses:</strong> Food, vegetable dishes
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CHICKPEA -->
+
+                <article class="crop-card" data-name="chickpea gram chana" data-category="pulse">
+
+                    <img src="https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=900&q=80"
+                        alt="Chickpeas">
+
+                    <div class="crop-info">
+
+                        <h3>🫘 Chickpea</h3>
+
+                        <p>
+                            Chickpea is a widely cultivated pulse crop and an
+                            important source of plant protein.
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong> Pulse
+                        </p>
+
+                        <p>
+                            <strong>Common uses:</strong> Dal, flour, food
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- MUSTARD -->
+
+                <article class="crop-card" data-name="mustard" data-category="oilseed">
+
+                    <img src="https://images.unsplash.com/photo-1589991303665-1e7c0b9f1d6f?auto=format&fit=crop&w=900&q=80"
+                        alt="Mustard field">
+
+                    <div class="crop-info">
+
+                        <h3>🌻 Mustard</h3>
+
+                        <p>
+                            Mustard is an important oilseed crop grown for its
+                            seeds and edible oil.
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong> Oilseed
+                        </p>
+
+                        <p>
+                            <strong>Common uses:</strong> Cooking oil, condiments
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SUNFLOWER -->
+
+                <article class="crop-card" data-name="sunflower" data-category="oilseed">
+
+                    <img src="https://images.unsplash.com/photo-1597848212624-e19a4d3d1a0a?auto=format&fit=crop&w=900&q=80"
+                        alt="Sunflower crop">
+
+                    <div class="crop-info">
+
+                        <h3>🌻 Sunflower</h3>
+
+                        <p>
+                            Sunflower is cultivated primarily for its oil-rich
+                            seeds.
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong> Oilseed
+                        </p>
+
+                        <p>
+                            <strong>Common uses:</strong> Edible oil, food
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TOMATO -->
+
+                <article class="crop-card" data-name="tomato tomatoes" data-category="vegetable">
+
+                    <img src="https://images.unsplash.com/photo-1546094096-0df4bcaaa337?auto=format&fit=crop&w=900&q=80"
+                        alt="Tomatoes">
+
+                    <div class="crop-info">
+
+                        <h3>🍅 Tomato</h3>
+
+                        <p>
+                            Tomato is an important vegetable crop grown in many
+                            agricultural regions.
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong> Vegetable
+                        </p>
+
+                        <p>
+                            <strong>Common uses:</strong> Food, sauces, processing
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- POTATO -->
+
+                <article class="crop-card" data-name="potato potatoes" data-category="vegetable">
+
+                    <img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=900&q=80"
+                        alt="Potatoes">
+
+                    <div class="crop-info">
+
+                        <h3>🥔 Potato</h3>
+
+                        <p>
+                            Potato is a major food crop cultivated for its
+                            underground tubers.
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong> Vegetable
+                        </p>
+
+                        <p>
+                            <strong>Common uses:</strong> Food, snacks, processing
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ONION -->
+
+                <article class="crop-card" data-name="onion onions" data-category="vegetable">
+
+                    <img src="https://images.unsplash.com/photo-1508747703725-719777637510?auto=format&fit=crop&w=900&q=80"
+                        alt="Onions">
+
+                    <div class="crop-info">
+
+                        <h3>🧅 Onion</h3>
+
+                        <p>
+                            Onion is an important vegetable and spice crop used
+                            in cuisines around the world.
+                        </p>
+
+                        <p>
+                            <strong>Category:</strong> Vegetable
+                        </p>
+
+                        <p>
+                            <strong>Common uses:</strong> Food, spices, processing
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- No results -->
+
+            <div id="noResults" style="
+          display:none;
+          text-align:center;
+          padding:40px;
+          color:var(--muted);
+        ">
+
+                <h3>
+                    🌱 No crops found
+                </h3>
+
+                <p>
+                    Try another crop name or category.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CROP REQUIREMENTS ================= -->
+
+    <section class="section light-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    FARMING BASICS
+                </span>
+
+                <h2>
+                    What Crops Need to Grow
+                </h2>
+
+                <p>
+                    Healthy crop growth depends on several environmental
+                    and management factors.
+                </p>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        ☀️
+                    </div>
+
+                    <h3>
+                        Sunlight
+                    </h3>
+
+                    <p>
+                        Plants need light for photosynthesis and healthy growth.
+                        Different crops have different light requirements.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        💧
+                    </div>
+
+                    <h3>
+                        Water
+                    </h3>
+
+                    <p>
+                        Adequate water is essential, but irrigation should be
+                        managed carefully to avoid waste and waterlogging.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🌱
+                    </div>
+
+                    <h3>
+                        Healthy Soil
+                    </h3>
+
+                    <p>
+                        Soil provides plants with nutrients, water, physical
+                        support, and a suitable environment for roots.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🌡️
+                    </div>
+
+                    <h3>
+                        Temperature
+                    </h3>
+
+                    <p>
+                        Crops have specific temperature ranges in which
+                        germination and growth are generally most successful.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🧪
+                    </div>
+
+                    <h3>
+                        Nutrients
+                    </h3>
+
+                    <p>
+                        Plants require essential nutrients for growth,
+                        development, flowering, and crop production.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🐝
+                    </div>
+
+                    <h3>
+                        Pollination
+                    </h3>
+
+                    <p>
+                        Many crops depend on pollination by insects, wind,
+                        or other natural processes to produce seeds and fruit.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= YIELD CALCULATOR ================= -->
+
+    <section class="section" id="calculator">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    FARM CALCULATOR
+                </span>
+
+                <h2>
+                    Estimate Crop Production
+                </h2>
+
+                <p>
+                    Enter your farm area and select a crop to get a simple
+                    educational production estimate.
+                </p>
+
+            </div>
+
+
+            <div class="calculator">
+
+                <div class="form-group">
+
+                    <label for="cropType">
+                        Select Crop
+                    </label>
+
+                    <select id="cropType" class="form-control">
+
+                        <option value="2.5">
+                            🌾 Rice
+                        </option>
+
+                        <option value="3">
+                            🌾 Wheat
+                        </option>
+
+                        <option value="3.5">
+                            🌽 Maize
+                        </option>
+
+                        <option value="1.8">
+                            🌿 Cotton
+                        </option>
+
+                        <option value="4">
+                            🫘 Chickpea
+                        </option>
+
+                        <option value="3">
+                            🌻 Mustard
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="area">
+                        Farm Area (hectares)
+                    </label>
+
+                    <input type="number" id="area" class="form-control" min="0" step="0.1" placeholder="Example: 2.5">
+
+                </div>
+
+
+                <button class="btn btn-green" id="calculateBtn">
+
+                    Calculate Production
+
+                </button>
+
+
+                <div class="result-box" id="result">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FARMING TIPS ================= -->
+
+    <section class="section light-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span class="section-label">
+                    FARMING TIPS
+                </span>
+
+                <h2>
+                    Better Crop Management
+                </h2>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🧑‍🌾
+                    </div>
+
+                    <h3>
+                        Select Suitable Crops
+                    </h3>
+
+                    <p>
+                        Consider local climate, soil, water availability,
+                        market demand, and farming resources when selecting crops.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🔬
+                    </div>
+
+                    <h3>
+                        Test Soil
+                    </h3>
+
+                    <p>
+                        Soil testing can help identify nutrient levels and
+                        guide appropriate soil-management decisions.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🌧️
+                    </div>
+
+                    <h3>
+                        Monitor Weather
+                    </h3>
+
+                    <p>
+                        Weather information can help farmers plan irrigation,
+                        planting, harvesting, and crop protection activities.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🐛
+                    </div>
+
+                    <h3>
+                        Monitor Pests
+                    </h3>
+
+                    <p>
+                        Regular crop monitoring helps identify pests and
+                        diseases early and supports integrated pest management.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        ♻️
+                    </div>
+
+                    <h3>
+                        Use Sustainable Methods
+                    </h3>
+
+                    <p>
+                        Crop rotation, composting, efficient irrigation,
+                        and conservation practices can support long-term farm health.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        📱
+                    </div>
+
+                    <h3>
+                        Use Technology
+                    </h3>
+
+                    <p>
+                        Digital tools can help with farm records, weather
+                        monitoring, crop tracking, and decision-making.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta-section">
+
+        <div class="container">
+
+            <div class="cta-content">
+
+                <div>
+
+                    <span class="section-label">
+                        AGRIVISION
+                    </span>
+
+                    <h2>
+                        Manage Your Farm Smarter
+                    </h2>
+
+                    <p>
+                        Explore the AgriVision dashboard for a simple
+                        overview of farm data and agricultural planning.
+                    </p>
+
+                </div>
+
+                <a href="dashboard.html" class="btn btn-primary">
+
+                    Open Dashboard →
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a href="index.html" class="logo footer-logo">
+
+                    Agri<span>Vision</span> 🌱
+
+                </a>
+
+                <p>
+                    Technology and knowledge for a sustainable
+                    agricultural future.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="crops.html">
+                    Crops
+                </a>
+
+                <a href="dashboard.html">
+                    Dashboard
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Crop Categories
+                </h3>
+
+                <a href="#crops">
+                    Cereals
+                </a>
+
+                <a href="#crops">
+                    Pulses
+                </a>
+
+                <a href="#crops">
+                    Cash Crops
+                </a>
+
+                <a href="#crops">
+                    Oilseeds
+                </a>
+
+                <a href="#crops">
+                    Vegetables
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © <span id="year"></span>
+                AgriVision. Agriculture Project.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+
+    <!-- Crop page specific JavaScript -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const search =
+                document.getElementById("cropSearch");
+
+            const cards =
+                document.querySelectorAll(".crop-card");
+
+            const buttons =
+                document.querySelectorAll(".filter-btn");
+
+            const noResults =
+                document.getElementById("noResults");
+
+
+            let selectedCategory = "all";
+
+
+            function filterCrops() {
+
+                const searchText =
+                    search.value.trim().toLowerCase();
+
+                let visibleCount = 0;
+
+
+                cards.forEach(card => {
+
+                    const name =
+                        (card.dataset.name || "").toLowerCase();
+
+                    const category =
+                        card.dataset.category;
+
+
+                    const matchesSearch =
+                        name.includes(searchText) ||
+                        card.textContent
+                            .toLowerCase()
+                            .includes(searchText);
+
+
+                    const matchesCategory =
+                        selectedCategory === "all" ||
+                        category === selectedCategory;
+
+
+                    if (
+                        matchesSearch &&
+                        matchesCategory
+                    ) {
+
+                        card.style.display = "";
+
+                        visibleCount++;
+
+                    } else {
+
+                        card.style.display = "none";
+
+                    }
+
+                });
+
+
+                noResults.style.display =
+                    visibleCount === 0
+                        ? "block"
+                        : "none";
+
+            }
+
+
+            // Search
+
+            search.addEventListener(
+                "input",
+                filterCrops
+            );
+
+
+            // Category filters
+
+            buttons.forEach(button => {
+
+                button.addEventListener(
+                    "click",
+                    () => {
+
+                        buttons.forEach(btn => {
+
+                            btn.classList.remove("active");
+
+                        });
+
+
+                        button.classList.add("active");
+
+
+                        selectedCategory =
+                            button.dataset.filter;
+
+
+                        filterCrops();
+
+                    }
+                );
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

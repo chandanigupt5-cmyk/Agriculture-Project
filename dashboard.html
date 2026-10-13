@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgriVision - Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Agri<span>Vision</span> 🌱
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="technology.html">Technology</a></li>
+                <li><a href="irrigation.html">Irrigation</a></li>
+                <li><a href="soil.html">Soil</a></li>
+                <li><a href="weather.html" class="active">Weather</a></li>
+                <li><a href="pests.html">Pests</a></li>
+                <li><a href="tips.html" class="active">Tips</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div style="display:flex; gap:10px; align-items:center;">
+
+                <button class="theme-btn" id="themeBtn" title="Toggle dark mode">
+                    🌙
+                </button>
+
+                <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+                    ☰
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= DASHBOARD HEADER ================= -->
+
+    <main>
+
+        <section class="dashboard-header">
+
+            <div class="container">
+
+                <span class="section-label">
+                    AGRIVISION FARM MANAGEMENT
+                </span>
+
+                <h1>Farm Dashboard 🌾</h1>
+
+                <p>
+                    Monitor crops, irrigation, soil, weather and overall farm
+                    performance from one place.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SUMMARY CARDS ================= -->
+
+        <section style="padding-top:20px;">
+
+            <div class="container">
+
+                <div class="dashboard-grid">
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-card-icon">
+                            🌾
+                        </div>
+
+                        <h3>Total Crops</h3>
+
+                        <div class="dashboard-value" data-target="8">
+                            0
+                        </div>
+
+                        <p>
+                            Crops currently monitored
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-card-icon">
+                            💧
+                        </div>
+
+                        <h3>Water Usage</h3>
+
+                        <div class="dashboard-value">
+                            68%
+                        </div>
+
+                        <p>
+                            Irrigation efficiency
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-card-icon">
+                            🌱
+                        </div>
+
+                        <h3>Soil Health</h3>
+
+                        <div class="dashboard-value">
+                            82%
+                        </div>
+
+                        <p>
+                            Overall soil condition
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <div class="dashboard-card-icon">
+                            ☀️
+                        </div>
+
+                        <h3>Weather</h3>
+
+                        <div class="dashboard-value">
+                            28°C
+                        </div>
+
+                        <p>
+                            Current farm temperature
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FARM STATUS ================= -->
+
+        <section class="light-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        FARM OVERVIEW
+                    </span>
+
+                    <h2>Today's Farm Status</h2>
+
+                    <p>
+                        A quick overview of important farm activities and conditions.
+                    </p>
+
+                </div>
+
+
+                <div class="info-grid">
+
+                    <!-- Weather -->
+
+                    <div class="info-card">
+
+                        <div class="info-icon">
+                            🌤️
+                        </div>
+
+                        <h3>Weather Condition</h3>
+
+                        <p>
+                            Temperature: <strong>28°C</strong>
+                        </p>
+
+                        <p>
+                            Humidity: <strong>64%</strong>
+                        </p>
+
+                        <p>
+                            Wind: <strong>12 km/h</strong>
+                        </p>
+
+                        <a href="weather.html" class="btn btn-green" style="margin-top:18px;">
+                            View Weather
+                        </a>
+
+                    </div>
+
+
+                    <!-- Irrigation -->
+
+                    <div class="info-card">
+
+                        <div class="info-icon">
+                            💧
+                        </div>
+
+                        <h3>Irrigation Status</h3>
+
+                        <p>
+                            Main irrigation system is operating normally.
+                        </p>
+
+                        <p>
+                            Water tank level:
+                            <strong>76%</strong>
+                        </p>
+
+                        <a href="irrigation.html" class="btn btn-green" style="margin-top:18px;">
+                            Manage Irrigation
+                        </a>
+
+                    </div>
+
+
+                    <!-- Soil -->
+
+                    <div class="info-card">
+
+                        <div class="info-icon">
+                            🧪
+                        </div>
+
+                        <h3>Soil Condition</h3>
+
+                        <p>
+                            Soil moisture:
+                            <strong>72%</strong>
+                        </p>
+
+                        <p>
+                            Soil pH:
+                            <strong>6.7</strong>
+                        </p>
+
+                        <a href="soil.html" class="btn btn-green" style="margin-top:18px;">
+                            Check Soil
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CROP TABLE ================= -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        CROP MONITORING
+                    </span>
+
+                    <h2>Crop Performance</h2>
+
+                    <p>
+                        Current status of crops being monitored on the farm.
+                    </p>
+
+                </div>
+
+
+                <div class="table-wrapper">
+
+                    <table class="data-table">
+
+                        <thead>
+
+                            <tr>
+
+                                <th>Crop</th>
+                                <th>Area</th>
+                                <th>Growth</th>
+                                <th>Soil</th>
+                                <th>Water</th>
+                                <th>Status</th>
+
+                            </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+
+                                <td>🌾 Rice</td>
+
+                                <td>3.5 ha</td>
+
+                                <td>78%</td>
+
+                                <td>Good</td>
+
+                                <td>Good</td>
+
+                                <td>
+                                    <span style="color:#2e7d32;font-weight:bold;">
+                                        Healthy
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>🌾 Wheat</td>
+
+                                <td>2.8 ha</td>
+
+                                <td>84%</td>
+
+                                <td>Excellent</td>
+
+                                <td>Good</td>
+
+                                <td>
+                                    <span style="color:#2e7d32;font-weight:bold;">
+                                        Healthy
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>🌽 Maize</td>
+
+                                <td>2.2 ha</td>
+
+                                <td>71%</td>
+
+                                <td>Good</td>
+
+                                <td>Moderate</td>
+
+                                <td>
+                                    <span style="color:#f57c00;font-weight:bold;">
+                                        Monitor
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>🌿 Cotton</td>
+
+                                <td>1.9 ha</td>
+
+                                <td>65%</td>
+
+                                <td>Moderate</td>
+
+                                <td>Good</td>
+
+                                <td>
+                                    <span style="color:#f57c00;font-weight:bold;">
+                                        Monitor
+                                    </span>
+                                </td>
+
+                            </tr>
+
+
+                            <tr>
+
+                                <td>🥔 Potato</td>
+
+                                <td>1.5 ha</td>
+
+                                <td>88%</td>
+
+                                <td>Excellent</td>
+
+                                <td>Good</td>
+
+                                <td>
+                                    <span style="color:#2e7d32;font-weight:bold;">
+                                        Healthy
+                                    </span>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FARM ACTIVITIES ================= -->
+
+        <section class="light-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        FARM ACTIVITIES
+                    </span>
+
+                    <h2>Recent Activities</h2>
+
+                    <p>
+                        Important activities recorded by the farm management system.
+                    </p>
+
+                </div>
+
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+
+                        <div class="info-icon">
+                            💧
+                        </div>
+
+                        <h3>Irrigation Completed</h3>
+
+                        <p>
+                            Rice field irrigation was completed successfully.
+                        </p>
+
+                        <small>
+                            Today • 07:30 AM
+                        </small>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <div class="info-icon">
+                            🧪
+                        </div>
+
+                        <h3>Soil Check</h3>
+
+                        <p>
+                            Soil moisture and pH levels were checked.
+                        </p>
+
+                        <small>
+                            Today • 09:15 AM
+                        </small>
+
+                    </div>
+
+
+                    <div class="info-card">
+
+                        <div class="info-icon">
+                            🐛
+                        </div>
+
+                        <h3>Pest Inspection</h3>
+
+                        <p>
+                            Maize field inspected for common pest activity.
+                        </p>
+
+                        <small>
+                            Yesterday • 04:20 PM
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= FARMING ACTIONS ================= -->
+
+        <section>
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <span class="section-label">
+                        QUICK ACTIONS
+                    </span>
+
+                    <h2>Manage Your Farm</h2>
+
+                    <p>
+                        Quickly access important AgriVision tools.
+                    </p>
+
+                </div>
+
+
+                <div class="objective-grid">
+
+                    <div class="objective">
+
+                        <span>01</span>
+
+                        <h3>🌱 Crop Planning</h3>
+
+                        <p>
+                            Explore crop information and plan your seasonal farming
+                            activities.
+                        </p>
+
+                        <a href="index.html#crops" class="btn btn-outline" style="margin-top:15px;">
+                            Explore Crops
+                        </a>
+
+                    </div>
+
+
+                    <div class="objective">
+
+                        <span>02</span>
+
+                        <h3>💧 Irrigation</h3>
+
+                        <p>
+                            Learn about efficient irrigation methods and water
+                            management.
+                        </p>
+
+                        <a href="irrigation.html" class="btn btn-outline" style="margin-top:15px;">
+                            Open Irrigation
+                        </a>
+
+                    </div>
+
+
+                    <div class="objective">
+
+                        <span>03</span>
+
+                        <h3>🧮 Yield Estimate</h3>
+
+                        <p>
+                            Estimate crop production based on farm area and crop type.
+                        </p>
+
+                        <a href="calculator.html" class="btn btn-outline" style="margin-top:15px;">
+                            Calculate Yield
+                        </a>
+
+                    </div>
+
+
+                    <div class="objective">
+
+                        <span>04</span>
+
+                        <h3>🐛 Pest Management</h3>
+
+                        <p>
+                            Learn about crop pests, diseases and preventive management.
+                        </p>
+
+                        <a href="pests.html" class="btn btn-outline" style="margin-top:15px;">
+                            View Pests
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta-section">
+
+            <div class="container">
+
+                <div class="cta-content">
+
+                    <div>
+
+                        <span class="section-label">
+                            SMART FARMING
+                        </span>
+
+                        <h2>
+                            Make Better Farming Decisions 🌱
+                        </h2>
+
+                        <p>
+                            Use technology, data and sustainable practices to improve
+                            farm management.
+                        </p>
+
+                    </div>
+
+                    <a href="tips.html" class="btn btn-primary">
+                        View Farming Tips
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <div class="footer-content">
+
+                <div>
+
+                    <a href="index.html" class="logo footer-logo">
+                        Agri<span>Vision</span> 🌱
+                    </a>
+
+                    <p>
+                        AgriVision is an educational agriculture project focused on
+                        smart farming, sustainable agriculture and technology-driven
+                        farm management.
+                    </p>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>Quick Links</h3>
+
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="technology.html">Technology</a>
+                    <a href="dashboard.html">Dashboard</a>
+
+                </div>
+
+
+                <div class="footer-links">
+
+                    <h3>Farm Tools</h3>
+
+                    <a href="weather.html">Weather</a>
+                    <a href="soil.html">Soil Management</a>
+                    <a href="irrigation.html">Irrigation</a>
+                    <a href="calculator.html">Yield Calculator</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                © <span id="year">2026</span> AgriVision |
+                Agriculture Management Project 🌱
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
